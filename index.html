@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Judge — Game Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar / Nav -->
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="logo-icon">⚖️</span>
+        <span class="logo-text">JUDGE</span>
+      </div>
+      <p class="tagline">My games. My rules.</p>
+
+      <nav class="game-list" id="game-list">
+        <!-- Games injected by JS -->
+      </nav>
+
+      <footer class="sidebar-footer">
+        <a href="https://github.com/KromaaWRLD" target="_blank" rel="noopener">
+          @KromaaWRLD
+        </a>
+      </footer>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <header class="topbar">
+        <h1 id="game-title">Select a game</h1>
+        <div class="topbar-actions">
+          <button id="fullscreen-btn" class="btn" title="Toggle fullscreen">
+            ⛶ Fullscreen
+          </button>
+          <a id="open-new-tab" class="btn" href="#" target="_blank" rel="noopener">
+            Open ↗
+          </a>
+        </div>
+      </header>
+
+      <div class="game-frame-wrapper" id="frame-wrapper">
+        <div class="placeholder" id="placeholder">
+          <div class="placeholder-icon">⚖️</div>
+          <h2>Welcome to Judge</h2>
+          <p>Pick a game from the sidebar to start playing.</p>
+        </div>
+        <iframe
+          id="game-frame"
+          title="Game"
+          allow="fullscreen"
+          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+          style="display: none;"
+        ></iframe>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
